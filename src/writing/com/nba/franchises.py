@@ -21,4 +21,5 @@ def write_teams(directory_path: str, history: FranchiseHistory) -> None:
                     'x',
                     encoding="utf-8"
             ) as file:
+                # TODO: @jaebradley write this in YAML format
                 file.write(franchise.name)
