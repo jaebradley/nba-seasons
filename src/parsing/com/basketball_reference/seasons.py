@@ -57,9 +57,31 @@ class SeasonChampionParser(HTMLParser):
             self.champion_consumer(data)
 
 
+class SeasonLeagueParser(HTMLParser):
+    EXPECTED_ATTRIBUTES = {('class', 'left '), ('data-stat', 'lg_id')}
+
+    def __init__(self, consumer: Callable[[str], None]):
+        super().__init__()
+        self.consumer = consumer
+        self.recording = 0
+
+    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        if "td" == tag and self.EXPECTED_ATTRIBUTES == set(attrs):
+            self.recording += 1
+
+    def handle_endtag(self, tag: str) -> None:
+        if "td" == tag and 0 < self.recording:
+            self.recording -= 1
+
+    def handle_data(self, data: str) -> None:
+        if 0 < self.recording:
+            self.consumer(data)
+
+
 def parse(html: str) -> Set[Season]:
     start_years = []
     champions = []
+    leagues = []
 
     start_year_parser = SeasonStartYearParser(lambda value: start_years.append(value))
     start_year_parser.feed(html)
@@ -69,12 +91,19 @@ def parse(html: str) -> Set[Season]:
     champion_parser.feed(html)
     champion_parser.close()
 
-    if len(start_years) != len(champions):
+    league_parser = SeasonLeagueParser(lambda value: leagues.append(value))
+    league_parser.feed(html)
+    league_parser.close()
+
+    if len(start_years) != len(champions) != len(leagues):
         raise ValueError("Length of start years and champions differs")
 
     return set(
         map(
             lambda values: Season(start_year=values[0], champion=values[1]),
-            zip(start_years, champions)
+            filter(
+                lambda values: "NBA" in values[2],
+                zip(start_years, champions, leagues)
+            )
         )
     )

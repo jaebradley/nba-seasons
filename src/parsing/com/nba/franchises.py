@@ -1,40 +1,41 @@
-import json
+from dataclasses import dataclass
 from typing import Set, Dict
 
+from src.parsing.com.basketball_reference.franchises import FranchiseAndTeamParser, Record
 
+
+@dataclass(frozen=True)
 class Team:
-    def __init__(self, name: str, first_season_start_year: int, last_season_start_year: int):
-        if 0 >= first_season_start_year:
+    name: str
+    first_season_start_year: int
+    last_season_start_year: int
+
+    def __post_init__(self):
+        if 0 >= self.first_season_start_year:
             raise ValueError("First season start year must be positive")
 
-        if 0 >= last_season_start_year:
+        if 0 >= self.last_season_start_year:
             raise ValueError("Last season start year must be positive")
 
-        if 0 >= len(name):
+        if 0 >= len(self.name):
             raise ValueError("Name cannot be empty")
 
-        self.name = name
-        self.first_season_start_year = first_season_start_year
-        self.last_season_start_year = last_season_start_year
 
-    def __eq__(self, o: object) -> bool:
-        """Overrides the default implementation"""
-        return isinstance(o, Team) \
-               and self.name == o.name \
-               and self.first_season_start_year == o.first_season_start_year \
-               and self.last_season_start_year == o.last_season_start_year
-
-
+@dataclass(frozen=True)
 class Franchise:
-    def __init__(self, name: str):
-        if 0 >= len(name):
+    name: str
+    first_season_start_year: int
+    last_season_start_year: int
+
+    def __post_init__(self):
+        if 0 >= self.first_season_start_year:
+            raise ValueError("First season start year must be positive")
+
+        if 0 >= self.last_season_start_year:
+            raise ValueError("Last season start year must be positive")
+
+        if 0 >= len(self.name):
             raise ValueError("Name cannot be empty")
-
-        self.name = name
-
-    def __eq__(self, o: object) -> bool:
-        """Overrides the default implementation"""
-        return isinstance(o, Franchise) and self.name == o.name
 
 
 class FranchiseHistory:
@@ -43,33 +44,52 @@ class FranchiseHistory:
 
 
 def parse(data: str) -> FranchiseHistory:
-    # TODO: @jaebradley parse to specific response class
-    values = json.loads(data)
-    if 2 != values["resultSets"]:
-        raise ValueError("Expected two result sets")
-
-    if "FranchiseHistory" != values["resultSets"][0]["name"]:
-        raise ValueError("Expected first result set to be active franchise history")
-
-    if "DefunctTeams" != values["resultSets"][1]["name"]:
-        raise ValueError("Expected second result set to be inactive franchise history")
+    records = list()
+    parser = FranchiseAndTeamParser(lambda record: records.append(record))
+    parser.feed(data=data)
+    parser.close()
 
     current_franchise = None
-    current_franchise_id = None
-    current_franchise_teams = set()
     history = dict()
-    for value in (values["resultSets"][0]["rowSet"] + values["resultSets"][1]["rowSet"]):
-        name = value[2] + " " + value[3]
-        franchise_id = value[1]
-        if franchise_id != current_franchise_id:
-            history[current_franchise] = current_franchise_teams
-            current_franchise = Franchise(name=name)
-            current_franchise_teams = set()
-        else:
-            current_franchise_teams.add(Team(
-                name=name,
-                first_season_start_year=int(value[4]),
-                last_season_start_year=int(value[5])
-            ))
+    for record in records:
+        if "NBA" in record.league_name:
+            first_season_start_year = int(record.first_season_start_year.split("-")[0])
+            last_season_start_year = int(record.last_season_start_year.split("-")[0])
+            if current_franchise is None:
+                if record.type is not Record.Type.FRANCHISE:
+                    raise ValueError("Expected first record type to be a franchise record")
+
+                current_franchise = Franchise(
+                    name=record.name,
+                    first_season_start_year=first_season_start_year,
+                    last_season_start_year=last_season_start_year
+                )
+                history[current_franchise] = set()
+            else:
+                if record.type is Record.Type.FRANCHISE:
+                    if 0 == len(history[current_franchise]):
+                        history[current_franchise].add(
+                            Team(
+                                name=current_franchise.name,
+                                first_season_start_year=current_franchise.first_season_start_year,
+                                last_season_start_year=current_franchise.last_season_start_year
+                            )
+                        )
+                    current_franchise = Franchise(
+                        name=record.name,
+                        first_season_start_year=first_season_start_year,
+                        last_season_start_year=last_season_start_year
+                    )
+                    history[current_franchise] = set()
+                elif record.type is Record.Type.TEAM:
+                    history[current_franchise].add(
+                        Team(
+                            name=record.name,
+                            first_season_start_year=first_season_start_year,
+                            last_season_start_year=last_season_start_year
+                        )
+                    )
+                else:
+                    raise ValueError("Unknown record type")
 
     return FranchiseHistory(history=history)
