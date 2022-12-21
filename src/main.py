@@ -3,8 +3,7 @@ from pathlib import Path
 
 from src.parsing.com.basketball_reference.seasons import parse as parse_seasons
 from src.parsing.com.nba.franchises import parse as parse_franchises
-from src.writing.com.basketball_reference.seasons import write_seasons
-from src.writing.com.nba.franchises import write_franchises, write_teams
+from src.writing.com.basketball_reference.seasons import LeagueTranslator, LeagueWriter
 
 
 def main():
@@ -15,14 +14,9 @@ def main():
             seasons = parse_seasons(seasons_file.read())
             current_directory = str(Path(__file__).resolve().parent)
 
-            os.makedirs(current_directory + "/data/output/franchises", exist_ok=True)
-            write_franchises(current_directory + "/data/output/franchises", history=franchise_history)
-
-            os.makedirs(current_directory + "/data/output/seasons", exist_ok=True)
-            write_seasons(current_directory + "/data/output/seasons", seasons=seasons, history=franchise_history)
-
-            os.makedirs(current_directory + "/data/output/teams", exist_ok=True)
-            write_teams(current_directory + "/data/output/teams", history=franchise_history)
+            league = LeagueTranslator().translate(seasons=seasons, history=franchise_history)
+            os.makedirs(current_directory + "/data/output", exist_ok=True)
+            LeagueWriter(output_directory_path=current_directory + "/data/output").write(league=league)
 
 
 if __name__ == '__main__':
