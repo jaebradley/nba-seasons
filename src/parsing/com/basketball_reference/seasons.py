@@ -1,14 +1,9 @@
 from __future__ import annotations
 
-from dataclasses import dataclass
 from html.parser import HTMLParser
 from typing import Callable, Set
 
-
-@dataclass(frozen=True)
-class Season:
-    start_year: int
-    champion: str
+from .models import Season
 
 
 class SeasonStartYearParser(HTMLParser):
