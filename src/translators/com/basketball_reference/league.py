@@ -1,11 +1,12 @@
-from typing import Dict
 from collections import OrderedDict
+from typing import Dict
 
-from src.writing.com.basketball_reference.models import League, Season
+from src.writers.com.basketball_reference.models import League, Season
 
 
 def translate_league(franchise_and_team_by_starting_season: Dict[int, Dict[str, str]]) -> League:
-    franchise_and_team_by_season = OrderedDict(dict(sorted(franchise_and_team_by_starting_season.items(), key=lambda entry: entry[0])))
+    franchise_and_team_by_season = OrderedDict(
+        dict(sorted(franchise_and_team_by_starting_season.items(), key=lambda entry: entry[0])))
     start_year = next(iter(franchise_and_team_by_season))
     previous_season_end_year = start_year
     previous_season = None

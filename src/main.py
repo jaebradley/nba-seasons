@@ -5,7 +5,7 @@ from src.parsing.com.basketball_reference.seasons import parse as parse_seasons
 from src.parsing.com.nba.franchises import parse as parse_franchises
 from src.translators.com.basketball_reference.franchise import translate_franchise, filter_franchises
 from src.translators.com.basketball_reference.league import translate_league
-from src.writing.com.basketball_reference.seasons import LeagueWriter
+from src.writers.com.basketball_reference.seasons import LeagueWriter
 
 
 def main():
