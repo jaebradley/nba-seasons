@@ -10,6 +10,7 @@ def translate_league(franchise_and_team_by_starting_season: Dict[int, Dict[str, 
     start_year = next(iter(franchise_and_team_by_season))
     previous_season_end_year = start_year
     first_season = None
+    previous_season = None
 
     for season_start_year, team_name_by_franchise_names in franchise_and_team_by_season.items():
         current_season = Season(
@@ -20,6 +21,10 @@ def translate_league(franchise_and_team_by_starting_season: Dict[int, Dict[str, 
         )
         if first_season is None:
             first_season = current_season
+
+        if previous_season is not None:
+            previous_season.next_season = current_season
+        previous_season = current_season
         previous_season_end_year = season_start_year + current_season.duration_in_years
 
     return League(

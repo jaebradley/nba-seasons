@@ -20,7 +20,7 @@ class SeasonIterator:
         return current_season
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=False)
 class Season:
     next_season: Optional['Season'] = field(hash=False)
     offset_in_years: int = field(hash=False)
