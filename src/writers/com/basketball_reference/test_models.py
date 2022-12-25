@@ -1,18 +1,18 @@
 from unittest import TestCase
 
-from .models import Season
+from .models import Season, GregorianCalendarYearDuration, FranchiseName, TeamName
 
 
 class TestSeason(TestCase):
     def test_duplicate_team_names_raises_exception(self):
         with self.assertRaises(ValueError) as context:
             Season(
-                next_season=None,
-                offset_in_years=0,
-                duration_in_years=0,
+                previous_season=None,
+                offset=GregorianCalendarYearDuration(value=0),
+                duration=GregorianCalendarYearDuration(value=0),
                 team_name_by_franchise_names={
-                    "foo": "bar",
-                    "baz": "bar"
+                    FranchiseName(value="foo"): TeamName(value="bar"),
+                    FranchiseName(value="baz"): TeamName(value="bar"),
                 }
             )
 
@@ -20,12 +20,12 @@ class TestSeason(TestCase):
 
     def test_single_iteration_for_single_season(self):
         seasons = Season(
-            next_season=None,
-            offset_in_years=0,
-            duration_in_years=0,
+            previous_season=None,
+            offset=GregorianCalendarYearDuration(value=0),
+            duration=GregorianCalendarYearDuration(value=0),
             team_name_by_franchise_names={
-                "foo": "foo",
-                "baz": "baz"
+                FranchiseName(value="foo"): TeamName(value="foo"),
+                FranchiseName(value="baz"): TeamName(value="baz"),
             }
         )
         counter = 0
@@ -36,17 +36,17 @@ class TestSeason(TestCase):
 
     def test_two_iterations_for_two_seasons(self):
         seasons = Season(
-            next_season=Season(
-                next_season=None,
-                offset_in_years=1,
-                duration_in_years=2,
+            previous_season=Season(
+                previous_season=None,
+                offset=GregorianCalendarYearDuration(value=1),
+                duration=GregorianCalendarYearDuration(value=2),
                 team_name_by_franchise_names=dict({})
             ),
-            offset_in_years=0,
-            duration_in_years=0,
+            offset=GregorianCalendarYearDuration(value=0),
+            duration=GregorianCalendarYearDuration(value=0),
             team_name_by_franchise_names={
-                "foo": "foo",
-                "baz": "baz"
+                FranchiseName(value="foo"): TeamName(value="foo"),
+                FranchiseName(value="baz"): TeamName(value="baz"),
             }
         )
         counter = 0
