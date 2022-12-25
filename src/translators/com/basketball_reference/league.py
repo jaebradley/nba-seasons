@@ -1,35 +1,36 @@
 from collections import OrderedDict
 from typing import Dict
 
-from src.writers.com.basketball_reference.models import League, Season
+from src.writers.com.basketball_reference.models import GregorianCalendarCommonEraYearCount, FranchiseName, TeamName, \
+    GregorianCalendarYearDuration, League, Season, NonEmptyString
 
 
-def translate_league(franchise_and_team_by_starting_season: Dict[int, Dict[str, str]]) -> League:
+def translate_league(franchise_and_team_by_starting_season: Dict[
+    GregorianCalendarCommonEraYearCount,
+    Dict[FranchiseName, TeamName]]) -> League:
     franchise_and_team_by_season = OrderedDict(
-        dict(sorted(franchise_and_team_by_starting_season.items(), key=lambda entry: entry[0])))
+        dict(sorted(franchise_and_team_by_starting_season.items(), key=lambda entry: entry[0].value)))
     start_year = next(iter(franchise_and_team_by_season))
     previous_season_end_year = start_year
-    previous_season = None
     first_season = None
+    previous_season = None
 
     for season_start_year, team_name_by_franchise_names in franchise_and_team_by_season.items():
         current_season = Season(
-            offset_in_years=season_start_year - previous_season_end_year,
-            duration_in_years=1,
-            next_season=None,
-            starting_year=season_start_year,
+            previous_season=previous_season,
+            offset=GregorianCalendarYearDuration(value=season_start_year.value - previous_season_end_year.value),
+            duration=GregorianCalendarYearDuration(value=1),
             team_name_by_franchise_names=team_name_by_franchise_names
         )
         if first_season is None:
             first_season = current_season
-        if previous_season is not None:
-            previous_season.next_season = current_season
-            previous_season.duration_in_years = current_season.starting_year - previous_season.starting_year
-        previous_season_end_year = season_start_year + current_season.duration_in_years
+
         previous_season = current_season
+        previous_season_end_year = GregorianCalendarCommonEraYearCount(value=season_start_year.value + current_season.duration.value)
 
     return League(
-        name="National Basketball Association",
-        start_year=start_year,
-        inaugural_season=first_season
+        name=NonEmptyString(value="National Basketball Association"),
+        most_recent_season=(
+            next(iter(dict(sorted(franchise_and_team_by_starting_season.items(), key=lambda entry: -entry[0].value)))),
+            previous_season)
     )

@@ -1,8 +1,8 @@
-starting year: 1949
-seasons:
+ending year: 2021
+seasons: 
   - offset in years: 0
     duration in years: 1
-    team name by franchise names:
+    team name by franchise names: 
       Anderson Packers: Anderson Packers
       Atlanta Hawks: Tri-Cities Blackhawks
       Baltimore Bullets: Baltimore Bullets
@@ -21,7 +21,7 @@ seasons:
       Washington Capitols: Washington Capitols
   - offset in years: 0
     duration in years: 1
-    team name by franchise names:
+    team name by franchise names: 
       Atlanta Hawks: Tri-Cities Blackhawks
       Baltimore Bullets: Baltimore Bullets
       Boston Celtics: Boston Celtics
@@ -35,7 +35,7 @@ seasons:
       Washington Capitols: Washington Capitols
   - offset in years: 0
     duration in years: 1
-    team name by franchise names:
+    team name by franchise names: 
       Atlanta Hawks: Milwaukee Hawks
       Baltimore Bullets: Baltimore Bullets
       Boston Celtics: Boston Celtics
@@ -48,7 +48,7 @@ seasons:
       Sacramento Kings: Rochester Royals
   - offset in years: 0
     duration in years: 1
-    team name by franchise names:
+    team name by franchise names: 
       Atlanta Hawks: Milwaukee Hawks
       Baltimore Bullets: Baltimore Bullets
       Boston Celtics: Boston Celtics
@@ -61,7 +61,7 @@ seasons:
       Sacramento Kings: Rochester Royals
   - offset in years: 0
     duration in years: 1
-    team name by franchise names:
+    team name by franchise names: 
       Atlanta Hawks: Milwaukee Hawks
       Baltimore Bullets: Baltimore Bullets
       Boston Celtics: Boston Celtics
@@ -73,7 +73,7 @@ seasons:
       Sacramento Kings: Rochester Royals
   - offset in years: 0
     duration in years: 1
-    team name by franchise names:
+    team name by franchise names: 
       Atlanta Hawks: Milwaukee Hawks
       Baltimore Bullets: Baltimore Bullets
       Boston Celtics: Boston Celtics
@@ -85,7 +85,7 @@ seasons:
       Sacramento Kings: Rochester Royals
   - offset in years: 0
     duration in years: 1
-    team name by franchise names:
+    team name by franchise names: 
       Atlanta Hawks: St. Louis Hawks
       Boston Celtics: Boston Celtics
       Detroit Pistons: Fort Wayne Pistons
@@ -96,7 +96,7 @@ seasons:
       Sacramento Kings: Rochester Royals
   - offset in years: 0
     duration in years: 1
-    team name by franchise names:
+    team name by franchise names: 
       Atlanta Hawks: St. Louis Hawks
       Boston Celtics: Boston Celtics
       Detroit Pistons: Fort Wayne Pistons
@@ -107,7 +107,7 @@ seasons:
       Sacramento Kings: Rochester Royals
   - offset in years: 0
     duration in years: 1
-    team name by franchise names:
+    team name by franchise names: 
       Atlanta Hawks: St. Louis Hawks
       Boston Celtics: Boston Celtics
       Detroit Pistons: Detroit Pistons
@@ -118,7 +118,7 @@ seasons:
       Sacramento Kings: Cincinnati Royals
   - offset in years: 0
     duration in years: 1
-    team name by franchise names:
+    team name by franchise names: 
       Atlanta Hawks: St. Louis Hawks
       Boston Celtics: Boston Celtics
       Detroit Pistons: Detroit Pistons
@@ -129,7 +129,7 @@ seasons:
       Sacramento Kings: Cincinnati Royals
   - offset in years: 0
     duration in years: 1
-    team name by franchise names:
+    team name by franchise names: 
       Atlanta Hawks: St. Louis Hawks
       Boston Celtics: Boston Celtics
       Detroit Pistons: Detroit Pistons
@@ -140,7 +140,7 @@ seasons:
       Sacramento Kings: Cincinnati Royals
   - offset in years: 0
     duration in years: 1
-    team name by franchise names:
+    team name by franchise names: 
       Atlanta Hawks: St. Louis Hawks
       Boston Celtics: Boston Celtics
       Detroit Pistons: Detroit Pistons
@@ -151,7 +151,7 @@ seasons:
       Sacramento Kings: Cincinnati Royals
   - offset in years: 0
     duration in years: 1
-    team name by franchise names:
+    team name by franchise names: 
       Atlanta Hawks: St. Louis Hawks
       Boston Celtics: Boston Celtics
       Detroit Pistons: Detroit Pistons
@@ -163,7 +163,7 @@ seasons:
       Washington Wizards: Chicago Packers
   - offset in years: 0
     duration in years: 1
-    team name by franchise names:
+    team name by franchise names: 
       Atlanta Hawks: St. Louis Hawks
       Boston Celtics: Boston Celtics
       Detroit Pistons: Detroit Pistons
@@ -175,7 +175,7 @@ seasons:
       Washington Wizards: Chicago Zephyrs
   - offset in years: 0
     duration in years: 1
-    team name by franchise names:
+    team name by franchise names: 
       Atlanta Hawks: St. Louis Hawks
       Boston Celtics: Boston Celtics
       Detroit Pistons: Detroit Pistons
@@ -187,7 +187,7 @@ seasons:
       Washington Wizards: Baltimore Bullets
   - offset in years: 0
     duration in years: 1
-    team name by franchise names:
+    team name by franchise names: 
       Atlanta Hawks: St. Louis Hawks
       Boston Celtics: Boston Celtics
       Detroit Pistons: Detroit Pistons
@@ -199,7 +199,7 @@ seasons:
       Washington Wizards: Baltimore Bullets
   - offset in years: 0
     duration in years: 1
-    team name by franchise names:
+    team name by franchise names: 
       Atlanta Hawks: St. Louis Hawks
       Boston Celtics: Boston Celtics
       Detroit Pistons: Detroit Pistons
@@ -211,7 +211,7 @@ seasons:
       Washington Wizards: Baltimore Bullets
   - offset in years: 0
     duration in years: 1
-    team name by franchise names:
+    team name by franchise names: 
       Atlanta Hawks: St. Louis Hawks
       Boston Celtics: Boston Celtics
       Chicago Bulls: Chicago Bulls
@@ -224,7 +224,7 @@ seasons:
       Washington Wizards: Baltimore Bullets
   - offset in years: 0
     duration in years: 1
-    team name by franchise names:
+    team name by franchise names: 
       Atlanta Hawks: St. Louis Hawks
       Boston Celtics: Boston Celtics
       Chicago Bulls: Chicago Bulls
@@ -239,7 +239,7 @@ seasons:
       Washington Wizards: Baltimore Bullets
   - offset in years: 0
     duration in years: 1
-    team name by franchise names:
+    team name by franchise names: 
       Atlanta Hawks: Atlanta Hawks
       Boston Celtics: Boston Celtics
       Chicago Bulls: Chicago Bulls
@@ -256,7 +256,7 @@ seasons:
       Washington Wizards: Baltimore Bullets
   - offset in years: 0
     duration in years: 1
-    team name by franchise names:
+    team name by franchise names: 
       Atlanta Hawks: Atlanta Hawks
       Boston Celtics: Boston Celtics
       Chicago Bulls: Chicago Bulls
@@ -273,7 +273,7 @@ seasons:
       Washington Wizards: Baltimore Bullets
   - offset in years: 0
     duration in years: 1
-    team name by franchise names:
+    team name by franchise names: 
       Atlanta Hawks: Atlanta Hawks
       Boston Celtics: Boston Celtics
       Chicago Bulls: Chicago Bulls
@@ -293,7 +293,7 @@ seasons:
       Washington Wizards: Baltimore Bullets
   - offset in years: 0
     duration in years: 1
-    team name by franchise names:
+    team name by franchise names: 
       Atlanta Hawks: Atlanta Hawks
       Boston Celtics: Boston Celtics
       Chicago Bulls: Chicago Bulls
@@ -313,7 +313,7 @@ seasons:
       Washington Wizards: Baltimore Bullets
   - offset in years: 0
     duration in years: 1
-    team name by franchise names:
+    team name by franchise names: 
       Atlanta Hawks: Atlanta Hawks
       Boston Celtics: Boston Celtics
       Chicago Bulls: Chicago Bulls
@@ -333,7 +333,7 @@ seasons:
       Washington Wizards: Baltimore Bullets
   - offset in years: 0
     duration in years: 1
-    team name by franchise names:
+    team name by franchise names: 
       Atlanta Hawks: Atlanta Hawks
       Boston Celtics: Boston Celtics
       Chicago Bulls: Chicago Bulls
@@ -353,7 +353,7 @@ seasons:
       Washington Wizards: Capital Bullets
   - offset in years: 0
     duration in years: 1
-    team name by franchise names:
+    team name by franchise names: 
       Atlanta Hawks: Atlanta Hawks
       Boston Celtics: Boston Celtics
       Chicago Bulls: Chicago Bulls
@@ -374,7 +374,7 @@ seasons:
       Washington Wizards: Washington Bullets
   - offset in years: 0
     duration in years: 1
-    team name by franchise names:
+    team name by franchise names: 
       Atlanta Hawks: Atlanta Hawks
       Boston Celtics: Boston Celtics
       Chicago Bulls: Chicago Bulls
@@ -395,7 +395,7 @@ seasons:
       Washington Wizards: Washington Bullets
   - offset in years: 0
     duration in years: 1
-    team name by franchise names:
+    team name by franchise names: 
       Atlanta Hawks: Atlanta Hawks
       Boston Celtics: Boston Celtics
       Brooklyn Nets: New York Nets
@@ -420,7 +420,7 @@ seasons:
       Washington Wizards: Washington Bullets
   - offset in years: 0
     duration in years: 1
-    team name by franchise names:
+    team name by franchise names: 
       Atlanta Hawks: Atlanta Hawks
       Boston Celtics: Boston Celtics
       Brooklyn Nets: New Jersey Nets
@@ -445,7 +445,7 @@ seasons:
       Washington Wizards: Washington Bullets
   - offset in years: 0
     duration in years: 1
-    team name by franchise names:
+    team name by franchise names: 
       Atlanta Hawks: Atlanta Hawks
       Boston Celtics: Boston Celtics
       Brooklyn Nets: New Jersey Nets
@@ -470,7 +470,7 @@ seasons:
       Washington Wizards: Washington Bullets
   - offset in years: 0
     duration in years: 1
-    team name by franchise names:
+    team name by franchise names: 
       Atlanta Hawks: Atlanta Hawks
       Boston Celtics: Boston Celtics
       Brooklyn Nets: New Jersey Nets
@@ -495,33 +495,7 @@ seasons:
       Washington Wizards: Washington Bullets
   - offset in years: 0
     duration in years: 1
-    team name by franchise names:
-      Atlanta Hawks: Atlanta Hawks
-      Boston Celtics: Boston Celtics
-      Brooklyn Nets: New Jersey Nets
-      Chicago Bulls: Chicago Bulls
-      Cleveland Cavaliers: Cleveland Cavaliers
-      Dallas Mavericks: Dallas Mavericks
-      Denver Nuggets: Denver Nuggets
-      Detroit Pistons: Detroit Pistons
-      Golden State Warriors: Golden State Warriors
-      Houston Rockets: Houston Rockets
-      Indiana Pacers: Indiana Pacers
-      Los Angeles Clippers: San Diego Clippers
-      Los Angeles Lakers: Los Angeles Lakers
-      Milwaukee Bucks: Milwaukee Bucks
-      New York Knicks: New York Knicks
-      Oklahoma City Thunder: Seattle SuperSonics
-      Philadelphia 76ers: Philadelphia 76ers
-      Phoenix Suns: Phoenix Suns
-      Portland Trail Blazers: Portland Trail Blazers
-      Sacramento Kings: Kansas City Kings
-      San Antonio Spurs: San Antonio Spurs
-      Utah Jazz: Utah Jazz
-      Washington Wizards: Washington Bullets
-  - offset in years: 0
-    duration in years: 1
-    team name by franchise names:
+    team name by franchise names: 
       Atlanta Hawks: Atlanta Hawks
       Boston Celtics: Boston Celtics
       Brooklyn Nets: New Jersey Nets
@@ -547,7 +521,7 @@ seasons:
       Washington Wizards: Washington Bullets
   - offset in years: 0
     duration in years: 1
-    team name by franchise names:
+    team name by franchise names: 
       Atlanta Hawks: Atlanta Hawks
       Boston Celtics: Boston Celtics
       Brooklyn Nets: New Jersey Nets
@@ -573,7 +547,7 @@ seasons:
       Washington Wizards: Washington Bullets
   - offset in years: 0
     duration in years: 1
-    team name by franchise names:
+    team name by franchise names: 
       Atlanta Hawks: Atlanta Hawks
       Boston Celtics: Boston Celtics
       Brooklyn Nets: New Jersey Nets
@@ -599,7 +573,33 @@ seasons:
       Washington Wizards: Washington Bullets
   - offset in years: 0
     duration in years: 1
-    team name by franchise names:
+    team name by franchise names: 
+      Atlanta Hawks: Atlanta Hawks
+      Boston Celtics: Boston Celtics
+      Brooklyn Nets: New Jersey Nets
+      Chicago Bulls: Chicago Bulls
+      Cleveland Cavaliers: Cleveland Cavaliers
+      Dallas Mavericks: Dallas Mavericks
+      Denver Nuggets: Denver Nuggets
+      Detroit Pistons: Detroit Pistons
+      Golden State Warriors: Golden State Warriors
+      Houston Rockets: Houston Rockets
+      Indiana Pacers: Indiana Pacers
+      Los Angeles Clippers: San Diego Clippers
+      Los Angeles Lakers: Los Angeles Lakers
+      Milwaukee Bucks: Milwaukee Bucks
+      New York Knicks: New York Knicks
+      Oklahoma City Thunder: Seattle SuperSonics
+      Philadelphia 76ers: Philadelphia 76ers
+      Phoenix Suns: Phoenix Suns
+      Portland Trail Blazers: Portland Trail Blazers
+      Sacramento Kings: Kansas City Kings
+      San Antonio Spurs: San Antonio Spurs
+      Utah Jazz: Utah Jazz
+      Washington Wizards: Washington Bullets
+  - offset in years: 0
+    duration in years: 1
+    team name by franchise names: 
       Atlanta Hawks: Atlanta Hawks
       Boston Celtics: Boston Celtics
       Brooklyn Nets: New Jersey Nets
@@ -625,7 +625,7 @@ seasons:
       Washington Wizards: Washington Bullets
   - offset in years: 0
     duration in years: 1
-    team name by franchise names:
+    team name by franchise names: 
       Atlanta Hawks: Atlanta Hawks
       Boston Celtics: Boston Celtics
       Brooklyn Nets: New Jersey Nets
@@ -651,7 +651,7 @@ seasons:
       Washington Wizards: Washington Bullets
   - offset in years: 0
     duration in years: 1
-    team name by franchise names:
+    team name by franchise names: 
       Atlanta Hawks: Atlanta Hawks
       Boston Celtics: Boston Celtics
       Brooklyn Nets: New Jersey Nets
@@ -677,7 +677,7 @@ seasons:
       Washington Wizards: Washington Bullets
   - offset in years: 0
     duration in years: 1
-    team name by franchise names:
+    team name by franchise names: 
       Atlanta Hawks: Atlanta Hawks
       Boston Celtics: Boston Celtics
       Brooklyn Nets: New Jersey Nets
@@ -703,35 +703,7 @@ seasons:
       Washington Wizards: Washington Bullets
   - offset in years: 0
     duration in years: 1
-    team name by franchise names:
-      Atlanta Hawks: Atlanta Hawks
-      Boston Celtics: Boston Celtics
-      Brooklyn Nets: New Jersey Nets
-      Charlotte Hornets: Charlotte Hornets
-      Chicago Bulls: Chicago Bulls
-      Cleveland Cavaliers: Cleveland Cavaliers
-      Dallas Mavericks: Dallas Mavericks
-      Denver Nuggets: Denver Nuggets
-      Detroit Pistons: Detroit Pistons
-      Golden State Warriors: Golden State Warriors
-      Houston Rockets: Houston Rockets
-      Indiana Pacers: Indiana Pacers
-      Los Angeles Clippers: Los Angeles Clippers
-      Los Angeles Lakers: Los Angeles Lakers
-      Miami Heat: Miami Heat
-      Milwaukee Bucks: Milwaukee Bucks
-      New York Knicks: New York Knicks
-      Oklahoma City Thunder: Seattle SuperSonics
-      Philadelphia 76ers: Philadelphia 76ers
-      Phoenix Suns: Phoenix Suns
-      Portland Trail Blazers: Portland Trail Blazers
-      Sacramento Kings: Sacramento Kings
-      San Antonio Spurs: San Antonio Spurs
-      Utah Jazz: Utah Jazz
-      Washington Wizards: Washington Bullets
-  - offset in years: 0
-    duration in years: 1
-    team name by franchise names:
+    team name by franchise names: 
       Atlanta Hawks: Atlanta Hawks
       Boston Celtics: Boston Celtics
       Brooklyn Nets: New Jersey Nets
@@ -748,10 +720,8 @@ seasons:
       Los Angeles Lakers: Los Angeles Lakers
       Miami Heat: Miami Heat
       Milwaukee Bucks: Milwaukee Bucks
-      Minnesota Timberwolves: Minnesota Timberwolves
       New York Knicks: New York Knicks
       Oklahoma City Thunder: Seattle SuperSonics
-      Orlando Magic: Orlando Magic
       Philadelphia 76ers: Philadelphia 76ers
       Phoenix Suns: Phoenix Suns
       Portland Trail Blazers: Portland Trail Blazers
@@ -761,7 +731,7 @@ seasons:
       Washington Wizards: Washington Bullets
   - offset in years: 0
     duration in years: 1
-    team name by franchise names:
+    team name by franchise names: 
       Atlanta Hawks: Atlanta Hawks
       Boston Celtics: Boston Celtics
       Brooklyn Nets: New Jersey Nets
@@ -791,7 +761,7 @@ seasons:
       Washington Wizards: Washington Bullets
   - offset in years: 0
     duration in years: 1
-    team name by franchise names:
+    team name by franchise names: 
       Atlanta Hawks: Atlanta Hawks
       Boston Celtics: Boston Celtics
       Brooklyn Nets: New Jersey Nets
@@ -821,7 +791,7 @@ seasons:
       Washington Wizards: Washington Bullets
   - offset in years: 0
     duration in years: 1
-    team name by franchise names:
+    team name by franchise names: 
       Atlanta Hawks: Atlanta Hawks
       Boston Celtics: Boston Celtics
       Brooklyn Nets: New Jersey Nets
@@ -851,7 +821,7 @@ seasons:
       Washington Wizards: Washington Bullets
   - offset in years: 0
     duration in years: 1
-    team name by franchise names:
+    team name by franchise names: 
       Atlanta Hawks: Atlanta Hawks
       Boston Celtics: Boston Celtics
       Brooklyn Nets: New Jersey Nets
@@ -881,7 +851,7 @@ seasons:
       Washington Wizards: Washington Bullets
   - offset in years: 0
     duration in years: 1
-    team name by franchise names:
+    team name by franchise names: 
       Atlanta Hawks: Atlanta Hawks
       Boston Celtics: Boston Celtics
       Brooklyn Nets: New Jersey Nets
@@ -911,7 +881,37 @@ seasons:
       Washington Wizards: Washington Bullets
   - offset in years: 0
     duration in years: 1
-    team name by franchise names:
+    team name by franchise names: 
+      Atlanta Hawks: Atlanta Hawks
+      Boston Celtics: Boston Celtics
+      Brooklyn Nets: New Jersey Nets
+      Charlotte Hornets: Charlotte Hornets
+      Chicago Bulls: Chicago Bulls
+      Cleveland Cavaliers: Cleveland Cavaliers
+      Dallas Mavericks: Dallas Mavericks
+      Denver Nuggets: Denver Nuggets
+      Detroit Pistons: Detroit Pistons
+      Golden State Warriors: Golden State Warriors
+      Houston Rockets: Houston Rockets
+      Indiana Pacers: Indiana Pacers
+      Los Angeles Clippers: Los Angeles Clippers
+      Los Angeles Lakers: Los Angeles Lakers
+      Miami Heat: Miami Heat
+      Milwaukee Bucks: Milwaukee Bucks
+      Minnesota Timberwolves: Minnesota Timberwolves
+      New York Knicks: New York Knicks
+      Oklahoma City Thunder: Seattle SuperSonics
+      Orlando Magic: Orlando Magic
+      Philadelphia 76ers: Philadelphia 76ers
+      Phoenix Suns: Phoenix Suns
+      Portland Trail Blazers: Portland Trail Blazers
+      Sacramento Kings: Sacramento Kings
+      San Antonio Spurs: San Antonio Spurs
+      Utah Jazz: Utah Jazz
+      Washington Wizards: Washington Bullets
+  - offset in years: 0
+    duration in years: 1
+    team name by franchise names: 
       Atlanta Hawks: Atlanta Hawks
       Boston Celtics: Boston Celtics
       Brooklyn Nets: New Jersey Nets
@@ -943,7 +943,7 @@ seasons:
       Washington Wizards: Washington Bullets
   - offset in years: 0
     duration in years: 1
-    team name by franchise names:
+    team name by franchise names: 
       Atlanta Hawks: Atlanta Hawks
       Boston Celtics: Boston Celtics
       Brooklyn Nets: New Jersey Nets
@@ -975,7 +975,7 @@ seasons:
       Washington Wizards: Washington Bullets
   - offset in years: 0
     duration in years: 1
-    team name by franchise names:
+    team name by franchise names: 
       Atlanta Hawks: Atlanta Hawks
       Boston Celtics: Boston Celtics
       Brooklyn Nets: New Jersey Nets
@@ -1007,7 +1007,7 @@ seasons:
       Washington Wizards: Washington Wizards
   - offset in years: 0
     duration in years: 1
-    team name by franchise names:
+    team name by franchise names: 
       Atlanta Hawks: Atlanta Hawks
       Boston Celtics: Boston Celtics
       Brooklyn Nets: New Jersey Nets
@@ -1039,7 +1039,7 @@ seasons:
       Washington Wizards: Washington Wizards
   - offset in years: 0
     duration in years: 1
-    team name by franchise names:
+    team name by franchise names: 
       Atlanta Hawks: Atlanta Hawks
       Boston Celtics: Boston Celtics
       Brooklyn Nets: New Jersey Nets
@@ -1071,7 +1071,7 @@ seasons:
       Washington Wizards: Washington Wizards
   - offset in years: 0
     duration in years: 1
-    team name by franchise names:
+    team name by franchise names: 
       Atlanta Hawks: Atlanta Hawks
       Boston Celtics: Boston Celtics
       Brooklyn Nets: New Jersey Nets
@@ -1103,7 +1103,7 @@ seasons:
       Washington Wizards: Washington Wizards
   - offset in years: 0
     duration in years: 1
-    team name by franchise names:
+    team name by franchise names: 
       Atlanta Hawks: Atlanta Hawks
       Boston Celtics: Boston Celtics
       Brooklyn Nets: New Jersey Nets
@@ -1135,39 +1135,7 @@ seasons:
       Washington Wizards: Washington Wizards
   - offset in years: 0
     duration in years: 1
-    team name by franchise names:
-      Atlanta Hawks: Atlanta Hawks
-      Boston Celtics: Boston Celtics
-      Brooklyn Nets: New Jersey Nets
-      Chicago Bulls: Chicago Bulls
-      Cleveland Cavaliers: Cleveland Cavaliers
-      Dallas Mavericks: Dallas Mavericks
-      Denver Nuggets: Denver Nuggets
-      Detroit Pistons: Detroit Pistons
-      Golden State Warriors: Golden State Warriors
-      Houston Rockets: Houston Rockets
-      Indiana Pacers: Indiana Pacers
-      Los Angeles Clippers: Los Angeles Clippers
-      Los Angeles Lakers: Los Angeles Lakers
-      Memphis Grizzlies: Memphis Grizzlies
-      Miami Heat: Miami Heat
-      Milwaukee Bucks: Milwaukee Bucks
-      Minnesota Timberwolves: Minnesota Timberwolves
-      New Orleans Pelicans: New Orleans Hornets
-      New York Knicks: New York Knicks
-      Oklahoma City Thunder: Seattle SuperSonics
-      Orlando Magic: Orlando Magic
-      Philadelphia 76ers: Philadelphia 76ers
-      Phoenix Suns: Phoenix Suns
-      Portland Trail Blazers: Portland Trail Blazers
-      Sacramento Kings: Sacramento Kings
-      San Antonio Spurs: San Antonio Spurs
-      Toronto Raptors: Toronto Raptors
-      Utah Jazz: Utah Jazz
-      Washington Wizards: Washington Wizards
-  - offset in years: 0
-    duration in years: 1
-    team name by franchise names:
+    team name by franchise names: 
       Atlanta Hawks: Atlanta Hawks
       Boston Celtics: Boston Celtics
       Brooklyn Nets: New Jersey Nets
@@ -1199,7 +1167,39 @@ seasons:
       Washington Wizards: Washington Wizards
   - offset in years: 0
     duration in years: 1
-    team name by franchise names:
+    team name by franchise names: 
+      Atlanta Hawks: Atlanta Hawks
+      Boston Celtics: Boston Celtics
+      Brooklyn Nets: New Jersey Nets
+      Chicago Bulls: Chicago Bulls
+      Cleveland Cavaliers: Cleveland Cavaliers
+      Dallas Mavericks: Dallas Mavericks
+      Denver Nuggets: Denver Nuggets
+      Detroit Pistons: Detroit Pistons
+      Golden State Warriors: Golden State Warriors
+      Houston Rockets: Houston Rockets
+      Indiana Pacers: Indiana Pacers
+      Los Angeles Clippers: Los Angeles Clippers
+      Los Angeles Lakers: Los Angeles Lakers
+      Memphis Grizzlies: Memphis Grizzlies
+      Miami Heat: Miami Heat
+      Milwaukee Bucks: Milwaukee Bucks
+      Minnesota Timberwolves: Minnesota Timberwolves
+      New Orleans Pelicans: New Orleans Hornets
+      New York Knicks: New York Knicks
+      Oklahoma City Thunder: Seattle SuperSonics
+      Orlando Magic: Orlando Magic
+      Philadelphia 76ers: Philadelphia 76ers
+      Phoenix Suns: Phoenix Suns
+      Portland Trail Blazers: Portland Trail Blazers
+      Sacramento Kings: Sacramento Kings
+      San Antonio Spurs: San Antonio Spurs
+      Toronto Raptors: Toronto Raptors
+      Utah Jazz: Utah Jazz
+      Washington Wizards: Washington Wizards
+  - offset in years: 0
+    duration in years: 1
+    team name by franchise names: 
       Atlanta Hawks: Atlanta Hawks
       Boston Celtics: Boston Celtics
       Brooklyn Nets: New Jersey Nets
@@ -1232,7 +1232,7 @@ seasons:
       Washington Wizards: Washington Wizards
   - offset in years: 0
     duration in years: 1
-    team name by franchise names:
+    team name by franchise names: 
       Atlanta Hawks: Atlanta Hawks
       Boston Celtics: Boston Celtics
       Brooklyn Nets: New Jersey Nets
@@ -1265,7 +1265,7 @@ seasons:
       Washington Wizards: Washington Wizards
   - offset in years: 0
     duration in years: 1
-    team name by franchise names:
+    team name by franchise names: 
       Atlanta Hawks: Atlanta Hawks
       Boston Celtics: Boston Celtics
       Brooklyn Nets: New Jersey Nets
@@ -1298,7 +1298,7 @@ seasons:
       Washington Wizards: Washington Wizards
   - offset in years: 0
     duration in years: 1
-    team name by franchise names:
+    team name by franchise names: 
       Atlanta Hawks: Atlanta Hawks
       Boston Celtics: Boston Celtics
       Brooklyn Nets: New Jersey Nets
@@ -1331,7 +1331,7 @@ seasons:
       Washington Wizards: Washington Wizards
   - offset in years: 0
     duration in years: 1
-    team name by franchise names:
+    team name by franchise names: 
       Atlanta Hawks: Atlanta Hawks
       Boston Celtics: Boston Celtics
       Brooklyn Nets: New Jersey Nets
@@ -1364,7 +1364,7 @@ seasons:
       Washington Wizards: Washington Wizards
   - offset in years: 0
     duration in years: 1
-    team name by franchise names:
+    team name by franchise names: 
       Atlanta Hawks: Atlanta Hawks
       Boston Celtics: Boston Celtics
       Brooklyn Nets: New Jersey Nets
@@ -1397,7 +1397,7 @@ seasons:
       Washington Wizards: Washington Wizards
   - offset in years: 0
     duration in years: 1
-    team name by franchise names:
+    team name by franchise names: 
       Atlanta Hawks: Atlanta Hawks
       Boston Celtics: Boston Celtics
       Brooklyn Nets: New Jersey Nets
@@ -1430,7 +1430,7 @@ seasons:
       Washington Wizards: Washington Wizards
   - offset in years: 0
     duration in years: 1
-    team name by franchise names:
+    team name by franchise names: 
       Atlanta Hawks: Atlanta Hawks
       Boston Celtics: Boston Celtics
       Brooklyn Nets: New Jersey Nets
@@ -1463,7 +1463,7 @@ seasons:
       Washington Wizards: Washington Wizards
   - offset in years: 0
     duration in years: 1
-    team name by franchise names:
+    team name by franchise names: 
       Atlanta Hawks: Atlanta Hawks
       Boston Celtics: Boston Celtics
       Brooklyn Nets: Brooklyn Nets
@@ -1496,7 +1496,7 @@ seasons:
       Washington Wizards: Washington Wizards
   - offset in years: 0
     duration in years: 1
-    team name by franchise names:
+    team name by franchise names: 
       Atlanta Hawks: Atlanta Hawks
       Boston Celtics: Boston Celtics
       Brooklyn Nets: Brooklyn Nets
@@ -1529,7 +1529,7 @@ seasons:
       Washington Wizards: Washington Wizards
   - offset in years: 0
     duration in years: 1
-    team name by franchise names:
+    team name by franchise names: 
       Atlanta Hawks: Atlanta Hawks
       Boston Celtics: Boston Celtics
       Brooklyn Nets: Brooklyn Nets
@@ -1562,7 +1562,7 @@ seasons:
       Washington Wizards: Washington Wizards
   - offset in years: 0
     duration in years: 1
-    team name by franchise names:
+    team name by franchise names: 
       Atlanta Hawks: Atlanta Hawks
       Boston Celtics: Boston Celtics
       Brooklyn Nets: Brooklyn Nets
@@ -1595,7 +1595,7 @@ seasons:
       Washington Wizards: Washington Wizards
   - offset in years: 0
     duration in years: 1
-    team name by franchise names:
+    team name by franchise names: 
       Atlanta Hawks: Atlanta Hawks
       Boston Celtics: Boston Celtics
       Brooklyn Nets: Brooklyn Nets
@@ -1628,7 +1628,7 @@ seasons:
       Washington Wizards: Washington Wizards
   - offset in years: 0
     duration in years: 1
-    team name by franchise names:
+    team name by franchise names: 
       Atlanta Hawks: Atlanta Hawks
       Boston Celtics: Boston Celtics
       Brooklyn Nets: Brooklyn Nets
@@ -1661,7 +1661,7 @@ seasons:
       Washington Wizards: Washington Wizards
   - offset in years: 0
     duration in years: 1
-    team name by franchise names:
+    team name by franchise names: 
       Atlanta Hawks: Atlanta Hawks
       Boston Celtics: Boston Celtics
       Brooklyn Nets: Brooklyn Nets
@@ -1694,7 +1694,7 @@ seasons:
       Washington Wizards: Washington Wizards
   - offset in years: 0
     duration in years: 1
-    team name by franchise names:
+    team name by franchise names: 
       Atlanta Hawks: Atlanta Hawks
       Boston Celtics: Boston Celtics
       Brooklyn Nets: Brooklyn Nets
@@ -1727,7 +1727,7 @@ seasons:
       Washington Wizards: Washington Wizards
   - offset in years: 0
     duration in years: 1
-    team name by franchise names:
+    team name by franchise names: 
       Atlanta Hawks: Atlanta Hawks
       Boston Celtics: Boston Celtics
       Brooklyn Nets: Brooklyn Nets
@@ -1760,7 +1760,7 @@ seasons:
       Washington Wizards: Washington Wizards
   - offset in years: 0
     duration in years: 1
-    team name by franchise names:
+    team name by franchise names: 
       Atlanta Hawks: Atlanta Hawks
       Boston Celtics: Boston Celtics
       Brooklyn Nets: Brooklyn Nets
