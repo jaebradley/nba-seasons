@@ -1,61 +1,53 @@
-from typing import Set, Dict
+from itertools import groupby
+from typing import Set, Dict, Tuple, List, Callable, Optional
 
-from src.parsing.com.basketball_reference.franchises import FranchiseAndTeamParser, Record
-from .models import Team, Franchise
-
-
-class FranchiseHistory:
-    def __init__(self, history: Dict[Franchise, Set[Team]]):
-        self.history = history
+from src.parsing.com.basketball_reference.franchises import Record
+from src.parsing.com.basketball_reference.models import Team, Franchise
 
 
-def parse(data: str) -> FranchiseHistory:
-    records = list()
-    parser = FranchiseAndTeamParser(lambda record: records.append(record))
-    parser.feed(data=data)
-    parser.close()
+class RecordHandler:
+    def __init__(self, start_year_deserializer: Callable[[str], int]):
+        self.start_year_deserializer = start_year_deserializer
+        self.current_franchise = None
 
-    current_franchise = None
-    history = dict()
-    for record in records:
-        if "NBA" in record.league_name:
-            first_season_start_year = int(record.first_season_start_year.split("-")[0])
-            last_season_start_year = int(record.last_season_start_year.split("-")[0])
-            if current_franchise is None:
-                if record.type is not Record.Type.FRANCHISE:
-                    raise ValueError("Expected first record type to be a franchise record")
+    def handle(self, record: Record) -> Tuple[Franchise, Optional[Team]]:
+        first_season_start_year = self.start_year_deserializer(record.first_season_start_year)
+        last_season_start_year = self.start_year_deserializer(record.last_season_start_year)
 
-                current_franchise = Franchise(
-                    name=record.name,
-                    first_season_start_year=first_season_start_year,
-                    last_season_start_year=last_season_start_year
-                )
-                history[current_franchise] = set()
-            else:
-                if record.type is Record.Type.FRANCHISE:
-                    if 0 == len(history[current_franchise]):
-                        history[current_franchise].add(
-                            Team(
-                                name=current_franchise.name,
-                                first_season_start_year=current_franchise.first_season_start_year,
-                                last_season_start_year=current_franchise.last_season_start_year
-                            )
-                        )
-                    current_franchise = Franchise(
-                        name=record.name,
-                        first_season_start_year=first_season_start_year,
-                        last_season_start_year=last_season_start_year
-                    )
-                    history[current_franchise] = set()
-                elif record.type is Record.Type.TEAM:
-                    history[current_franchise].add(
-                        Team(
-                            name=record.name,
-                            first_season_start_year=first_season_start_year,
-                            last_season_start_year=last_season_start_year
-                        )
-                    )
-                else:
-                    raise ValueError("Unknown record type")
+        team = None
+        if record.type is Record.Type.FRANCHISE:
+            self.current_franchise = Franchise(
+                name=record.name,
+                first_season_start_year=first_season_start_year,
+                last_season_start_year=last_season_start_year
+            )
+        elif record.type is Record.Type.TEAM:
+            team = Team(
+                name=record.name,
+                first_season_start_year=first_season_start_year,
+                last_season_start_year=last_season_start_year
+            )
+        else:
+            raise ValueError
 
-    return FranchiseHistory(history=history)
+        return self.current_franchise, team
+
+
+class Parser:
+    def __init__(self, record_handler):
+        self.record_handler = record_handler
+
+    def parse(self, records: List[Record]) -> Dict[Franchise, Set[Team]]:
+        return dict(
+            map(
+                lambda entry: (entry[0], set([Team(name=entry[0].name,
+                                                   first_season_start_year=entry[0].first_season_start_year,
+                                                   last_season_start_year=entry[0].last_season_start_year)]) if len(
+                    entry[1]) <= 0 else entry[1]),
+                dict([(label, set([v for l, v in value if v is not None])) for (label, value) in groupby(
+                    map(
+                        lambda record: self.record_handler.handle(record=record),
+                        filter(lambda record: "NBA" in record.league_name, records)
+                    ), lambda x: x[0])]).items()
+            )
+        )
