@@ -1,6 +1,7 @@
 from unittest import TestCase
 
-from .models import Season, GregorianCalendarYearDuration, FranchiseName, TeamName
+from nba_seasons.models.basketball_reference import Season, FranchiseName, TeamName
+from nba_seasons.models.calendar import GregorianCalendarYearDuration
 
 
 class TestSeason(TestCase):

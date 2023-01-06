@@ -3,31 +3,8 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import Dict, Optional, Tuple
 
-
-@dataclass(frozen=True)
-class NaturalNumber:
-    value: int
-
-    def __post_init__(self):
-        if 0 > self.value:
-            raise ValueError("Must have non-negative value")
-
-
-@dataclass(frozen=True)
-class PositiveInteger(NaturalNumber):
-    def __post_init__(self):
-        if 0 >= self.value:
-            raise ValueError("Must have non-positive value")
-
-
-@dataclass(frozen=True)
-class GregorianCalendarCommonEraYearCount(PositiveInteger):
-    pass
-
-
-@dataclass(frozen=True)
-class GregorianCalendarYearDuration(NaturalNumber):
-    pass
+from nba_seasons.models.calendar import GregorianCalendarCommonEraYearCount, GregorianCalendarYearDuration
+from nba_seasons.models.strings import NonEmptyString
 
 
 class SeasonIterator:
@@ -44,15 +21,6 @@ class SeasonIterator:
         current_season = self.current_season
         self.current_season = self.current_season.previous_season
         return current_season
-
-
-@dataclass(frozen=True)
-class NonEmptyString:
-    value: str
-
-    def __post_init__(self):
-        if 0 >= len(self.value):
-            raise ValueError("String cannot be empty")
 
 
 @dataclass(frozen=True)

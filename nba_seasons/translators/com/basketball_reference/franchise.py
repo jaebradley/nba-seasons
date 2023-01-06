@@ -1,8 +1,9 @@
 from typing import Dict, Set
 
+from nba_seasons.models.basketball_reference import FranchiseName, TeamName
+from nba_seasons.models.calendar import GregorianCalendarCommonEraYearCount
 from nba_seasons.parsing.com.basketball_reference.models import Team, Franchise
 from nba_seasons.parsing.com.basketball_reference.seasons import Season
-from nba_seasons.writers.com.basketball_reference.models import GregorianCalendarCommonEraYearCount, FranchiseName, TeamName
 
 
 def translate_franchise(history: Dict[Franchise, Set[Team]]) -> Dict[

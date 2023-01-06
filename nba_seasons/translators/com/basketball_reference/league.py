@@ -1,8 +1,11 @@
 from collections import OrderedDict
 from typing import Dict
 
-from nba_seasons.writers.com.basketball_reference.models import GregorianCalendarCommonEraYearCount, FranchiseName, TeamName, \
-    GregorianCalendarYearDuration, League, Season, NonEmptyString
+from nba_seasons.models.basketball_reference import FranchiseName, TeamName, League
+from nba_seasons.models.calendar import GregorianCalendarCommonEraYearCount
+from nba_seasons.models.calendar import GregorianCalendarYearDuration
+from nba_seasons.models.strings import NonEmptyString
+from nba_seasons.parsing.com.basketball_reference.seasons import Season
 
 
 def translate_league(franchise_and_team_by_starting_season: Dict[
@@ -26,7 +29,8 @@ def translate_league(franchise_and_team_by_starting_season: Dict[
             first_season = current_season
 
         previous_season = current_season
-        previous_season_end_year = GregorianCalendarCommonEraYearCount(value=season_start_year.value + current_season.duration.value)
+        previous_season_end_year = GregorianCalendarCommonEraYearCount(
+            value=season_start_year.value + current_season.duration.value)
 
     return League(
         name=NonEmptyString(value="National Basketball Association"),

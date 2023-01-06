@@ -1,6 +1,6 @@
 from collections import OrderedDict
 
-from .models import League
+from nba_seasons.models.basketball_reference import League
 
 
 class LeagueWriter:
@@ -18,5 +18,6 @@ class LeagueWriter:
                 output_file.write("    team name by franchise names: \n")
 
                 for franchise_name, team_name in OrderedDict(
-                        sorted(current_season.team_name_by_franchise_names.items(), key=lambda entry: entry[0].value)).items():
+                        sorted(current_season.team_name_by_franchise_names.items(),
+                               key=lambda entry: entry[0].value)).items():
                     output_file.write("      " + franchise_name.value + ": " + team_name.value + "\n")
