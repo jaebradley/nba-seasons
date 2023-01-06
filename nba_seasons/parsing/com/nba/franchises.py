@@ -1,8 +1,8 @@
 from itertools import groupby
 from typing import Set, Dict, Tuple, List, Callable, Optional
 
-from src.parsing.com.basketball_reference.franchises import Record
-from src.parsing.com.basketball_reference.models import Team, Franchise
+from nba_seasons.parsing.com.basketball_reference.franchises import Record
+from nba_seasons.parsing.com.basketball_reference.models import Team, Franchise
 
 
 class RecordHandler:

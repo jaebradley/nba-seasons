@@ -1,7 +1,7 @@
 from collections import OrderedDict
 from typing import Dict
 
-from src.writers.com.basketball_reference.models import GregorianCalendarCommonEraYearCount, FranchiseName, TeamName, \
+from nba_seasons.writers.com.basketball_reference.models import GregorianCalendarCommonEraYearCount, FranchiseName, TeamName, \
     GregorianCalendarYearDuration, League, Season, NonEmptyString
 
 

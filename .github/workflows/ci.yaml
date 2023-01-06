@@ -1,0 +1,22 @@
+name: Test
+on: [push]
+jobs:
+  tests:
+    runs-on: macos-latest
+    name: Unit Tests
+    steps:
+    - name: Checkout Project
+      uses: actions/checkout@v3
+    - name: Install Python
+      uses: actions/setup-python@v4 
+      with:
+        python-version: '3.10'
+    - name: Install Poetry
+      run: mkdir -p './dependencies' && python3 -m venv './dependencies' && './dependencies/bin/pip' install -U pip setuptools && './dependencies/bin/pip' install poetry
+      shell: bash
+    - name: Install dependencies
+      run: ./dependencies/bin/poetry install
+      shell: bash
+    - name: Run tests
+      run: ./dependencies/bin/poetry run pytest
+      shell: bash

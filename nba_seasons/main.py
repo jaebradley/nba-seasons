@@ -1,12 +1,12 @@
 import os.path
 from pathlib import Path
 
-from src.parsing.com.basketball_reference.franchises import FranchiseAndTeamParser
-from src.parsing.com.basketball_reference.seasons import parse as parse_seasons
-from src.parsing.com.nba.franchises import Parser, RecordHandler
-from src.translators.com.basketball_reference.franchise import translate_franchise, filter_franchises
-from src.translators.com.basketball_reference.league import translate_league
-from src.writers.com.basketball_reference.seasons import LeagueWriter
+from nba_seasons.parsing.com.basketball_reference.franchises import FranchiseAndTeamParser
+from nba_seasons.parsing.com.basketball_reference.seasons import parse as parse_seasons
+from nba_seasons.parsing.com.nba.franchises import Parser, RecordHandler
+from nba_seasons.translators.com.basketball_reference.franchise import translate_franchise, filter_franchises
+from nba_seasons.translators.com.basketball_reference.league import translate_league
+from nba_seasons.writers.com.basketball_reference.seasons import LeagueWriter
 
 
 def main():

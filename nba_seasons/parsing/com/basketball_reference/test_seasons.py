@@ -1,6 +1,6 @@
 from unittest import TestCase
 
-from src.parsing.com.basketball_reference.seasons import parse, Season
+from nba_seasons.parsing.com.basketball_reference.seasons import parse, Season
 
 
 class Test(TestCase):
