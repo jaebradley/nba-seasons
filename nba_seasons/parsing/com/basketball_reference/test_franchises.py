@@ -1,6 +1,6 @@
 from unittest import TestCase
 
-from franchises import FranchiseAndTeamParser, Record
+from .franchises import FranchiseAndTeamParser, Record
 
 
 class TestFranchiseAndTeamParser(TestCase):
