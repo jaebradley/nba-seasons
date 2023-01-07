@@ -1,7 +1,7 @@
 from unittest import TestCase
 
 from nba_seasons.models.basketball_reference import Season, FranchiseName, TeamName
-from nba_seasons.models.calendar import GregorianCalendarYearDuration
+from nba_seasons.models.iso_8601 import YearDuration
 
 
 class TestSeason(TestCase):
@@ -9,8 +9,8 @@ class TestSeason(TestCase):
         with self.assertRaises(ValueError) as context:
             Season(
                 previous_season=None,
-                offset=GregorianCalendarYearDuration(value=0),
-                duration=GregorianCalendarYearDuration(value=0),
+                offset=YearDuration(value=0),
+                duration=YearDuration(value=0),
                 team_name_by_franchise_names={
                     FranchiseName(value="foo"): TeamName(value="bar"),
                     FranchiseName(value="baz"): TeamName(value="bar"),
@@ -22,8 +22,8 @@ class TestSeason(TestCase):
     def test_single_iteration_for_single_season(self):
         seasons = Season(
             previous_season=None,
-            offset=GregorianCalendarYearDuration(value=0),
-            duration=GregorianCalendarYearDuration(value=0),
+            offset=YearDuration(value=0),
+            duration=YearDuration(value=0),
             team_name_by_franchise_names={
                 FranchiseName(value="foo"): TeamName(value="foo"),
                 FranchiseName(value="baz"): TeamName(value="baz"),
@@ -39,12 +39,12 @@ class TestSeason(TestCase):
         seasons = Season(
             previous_season=Season(
                 previous_season=None,
-                offset=GregorianCalendarYearDuration(value=1),
-                duration=GregorianCalendarYearDuration(value=2),
+                offset=YearDuration(value=1),
+                duration=YearDuration(value=2),
                 team_name_by_franchise_names=dict({})
             ),
-            offset=GregorianCalendarYearDuration(value=0),
-            duration=GregorianCalendarYearDuration(value=0),
+            offset=YearDuration(value=0),
+            duration=YearDuration(value=0),
             team_name_by_franchise_names={
                 FranchiseName(value="foo"): TeamName(value="foo"),
                 FranchiseName(value="baz"): TeamName(value="baz"),

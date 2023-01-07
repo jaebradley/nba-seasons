@@ -3,7 +3,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import Dict, Optional, Tuple
 
-from nba_seasons.models.calendar import GregorianCalendarCommonEraYearCount, GregorianCalendarYearDuration
+from nba_seasons.models.iso_8601 import Year, YearDuration
 from nba_seasons.models.strings import NonEmptyString
 
 
@@ -36,8 +36,8 @@ class FranchiseName(NonEmptyString):
 @dataclass(frozen=True)
 class Season:
     previous_season: Optional['Season']
-    offset: GregorianCalendarYearDuration
-    duration: Optional[GregorianCalendarYearDuration]
+    offset: YearDuration
+    duration: Optional[YearDuration]
     team_name_by_franchise_names: Dict[FranchiseName, TeamName]
 
     def __post_init__(self):
@@ -51,4 +51,4 @@ class Season:
 @dataclass(frozen=True, eq=True)
 class League:
     name: NonEmptyString
-    most_recent_season: Tuple[GregorianCalendarCommonEraYearCount, Season]
+    most_recent_season: Tuple[Year, Season]

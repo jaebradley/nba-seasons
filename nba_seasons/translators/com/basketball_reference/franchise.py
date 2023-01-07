@@ -1,13 +1,13 @@
 from typing import Dict, Set
 
 from nba_seasons.models.basketball_reference import FranchiseName, TeamName
-from nba_seasons.models.calendar import GregorianCalendarCommonEraYearCount
+from nba_seasons.models.iso_8601 import Year
 from nba_seasons.parsing.com.basketball_reference.models import Team, Franchise
 from nba_seasons.parsing.com.basketball_reference.seasons import Season
 
 
 def translate_franchise(history: Dict[Franchise, Set[Team]]) -> Dict[
-    GregorianCalendarCommonEraYearCount,
+    Year,
     Dict[FranchiseName, TeamName]]:
     franchise_and_team_by_starting_season = dict({})
 
@@ -25,7 +25,7 @@ def translate_franchise(history: Dict[Franchise, Set[Team]]) -> Dict[
                 franchise_and_team_by_starting_season[season_start_year] = franchise_and_team
 
     return {
-        GregorianCalendarCommonEraYearCount(value=key): {
+        Year(value=key): {
             FranchiseName(value=franchise_name): TeamName(value=team_name)
             for franchise_name, team_name in value.items()
         } for key, value in franchise_and_team_by_starting_season.items()}
@@ -34,8 +34,8 @@ def translate_franchise(history: Dict[Franchise, Set[Team]]) -> Dict[
 def filter_franchises(
         seasons: Set[Season],
         franchises_and_team_by_starting_season: Dict[
-            GregorianCalendarCommonEraYearCount, Dict[FranchiseName, TeamName]]) -> Dict[
-    GregorianCalendarCommonEraYearCount, Dict[FranchiseName, TeamName]]:
+            Year, Dict[FranchiseName, TeamName]]) -> Dict[
+    Year, Dict[FranchiseName, TeamName]]:
     season_start_years = set(map(lambda season: season.start_year, seasons))
     return {key: value for key, value in franchises_and_team_by_starting_season.items() if
             key.value in season_start_years}
