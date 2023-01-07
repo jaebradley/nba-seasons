@@ -10,7 +10,7 @@ class LeagueWriter:
 
     def write(self, league: League):
         with open(self.output_directory_path + "/" + league.name.value + ".yaml", 'w', encoding="utf-8") as output_file:
-            output_file.write("ending year: " + str(league.most_recent_season[0].value) + "\n")
+            output_file.write("starting year: " + str(league.most_recent_season[0].value) + "\n")
             output_file.write("seasons: \n")
             for current_season in reversed(list(league.most_recent_season[1])):
                 output_file.write("  - offset in years: " + str(current_season.offset.value) + "\n")

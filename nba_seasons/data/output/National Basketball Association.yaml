@@ -1,4 +1,4 @@
-ending year: 2021
+starting year: 2022
 seasons: 
   - offset in years: 0
     duration in years: 1
@@ -1502,6 +1502,39 @@ seasons:
       Boston Celtics: Boston Celtics
       Brooklyn Nets: Brooklyn Nets
       Charlotte Hornets: Charlotte Bobcats
+      Chicago Bulls: Chicago Bulls
+      Cleveland Cavaliers: Cleveland Cavaliers
+      Dallas Mavericks: Dallas Mavericks
+      Denver Nuggets: Denver Nuggets
+      Detroit Pistons: Detroit Pistons
+      Golden State Warriors: Golden State Warriors
+      Houston Rockets: Houston Rockets
+      Indiana Pacers: Indiana Pacers
+      Los Angeles Clippers: Los Angeles Clippers
+      Los Angeles Lakers: Los Angeles Lakers
+      Memphis Grizzlies: Memphis Grizzlies
+      Miami Heat: Miami Heat
+      Milwaukee Bucks: Milwaukee Bucks
+      Minnesota Timberwolves: Minnesota Timberwolves
+      New Orleans Pelicans: New Orleans Pelicans
+      New York Knicks: New York Knicks
+      Oklahoma City Thunder: Oklahoma City Thunder
+      Orlando Magic: Orlando Magic
+      Philadelphia 76ers: Philadelphia 76ers
+      Phoenix Suns: Phoenix Suns
+      Portland Trail Blazers: Portland Trail Blazers
+      Sacramento Kings: Sacramento Kings
+      San Antonio Spurs: San Antonio Spurs
+      Toronto Raptors: Toronto Raptors
+      Utah Jazz: Utah Jazz
+      Washington Wizards: Washington Wizards
+  - offset in years: 0
+    duration in years: 1
+    team name by franchise names: 
+      Atlanta Hawks: Atlanta Hawks
+      Boston Celtics: Boston Celtics
+      Brooklyn Nets: Brooklyn Nets
+      Charlotte Hornets: Charlotte Hornets
       Chicago Bulls: Chicago Bulls
       Cleveland Cavaliers: Cleveland Cavaliers
       Dallas Mavericks: Dallas Mavericks
