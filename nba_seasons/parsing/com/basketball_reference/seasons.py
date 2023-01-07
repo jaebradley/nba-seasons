@@ -32,24 +32,31 @@ class SeasonStartYearParser(HTMLParser):
 
 
 class SeasonChampionParser(HTMLParser):
-    EXPECTED_ATTRIBUTES = {('class', 'left '), ('data-stat', 'champion')}
+    COMPLETED_SEASON_EXPECTED_ATTRIBUTES = {('class', 'left '), ('data-stat', 'champion')}
+    IN_PROGRESS_SEASON_EXPECTED_ATTRIBUTES = {('class', 'left iz'), ('data-stat', 'champion')}
 
     def __init__(self, champion_consumer: Callable[[str], None]):
         super().__init__()
         self.champion_consumer = champion_consumer
         self.recording = 0
+        self.data = None
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
-        if "td" == tag and self.EXPECTED_ATTRIBUTES == set(attrs):
+        attributes = set(attrs)
+        if "td" == tag and (
+                self.COMPLETED_SEASON_EXPECTED_ATTRIBUTES == attributes or
+                self.IN_PROGRESS_SEASON_EXPECTED_ATTRIBUTES == attributes):
             self.recording += 1
 
     def handle_endtag(self, tag: str) -> None:
         if "td" == tag and 0 < self.recording:
             self.recording -= 1
+            self.champion_consumer(self.data)
+            self.data = None
 
     def handle_data(self, data: str) -> None:
         if 0 < self.recording:
-            self.champion_consumer(data)
+            self.data = data
 
 
 class SeasonLeagueParser(HTMLParser):

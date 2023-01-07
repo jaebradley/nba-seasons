@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+from typing import Optional
 
 
 @dataclass(frozen=True)
@@ -40,11 +41,11 @@ class Franchise:
 @dataclass(frozen=True)
 class Season:
     start_year: int
-    champion: str
+    champion: Optional[str]
 
     def __post_init__(self):
         if 0 >= self.start_year:
             raise ValueError("Start year must be positive")
 
-        if 0 >= len(self.champion):
-            raise ValueError("Chamption name cannot be empty")
+        if self.champion is not None and 0 >= len(self.champion):
+            raise ValueError("Champion name cannot be empty")
