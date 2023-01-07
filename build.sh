@@ -32,17 +32,17 @@ function main() {
   if [[ "0" != "$?" ]]; then printf "Cannot create python3 virtual environment in ${dependencies_folder_path}\n" && exit 255; fi
 
   local -r pip_program_path="${dependencies_folder_path}/bin/pip"
-  $("${pip_program_path} install -U pip setuptools")
+  "${pip_program_path}" install -U pip setuptools
   if [[ "0" != "$?" ]]; then printf "Cannot execute pip program at ${pip_program_path}\n" && exit 255; fi
 
-  $("${pip_program_path} install poetry")
+  "${pip_program_path}" install poetry
   if [[ "0" != "$?" ]]; then printf "Cannot install poetry at ${pip_program_path}\n" && exit 255; fi
 
   local -r poetry_program_path="${dependencies_folder_path}/bin/poetry"
-  $("${poetry_program_path} install")
+  "${poetry_program_path}" install
   if [[ "0" != "$?" ]]; then printf "Cannot execute poetry at ${poetry_program_path}\n" && exit 255; fi
 
-  $("${poetry_program_path} run pytest")
+  "${poetry_program_path}" run pytest
   if [[ "0" != "$?" ]]; then printf "Cannot run pytest using poetry program at ${poetry_program_path}\n" && exit 255; fi
 }
 
