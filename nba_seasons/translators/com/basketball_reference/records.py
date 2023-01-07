@@ -33,11 +33,11 @@ class RecordHandler:
         return self.current_franchise, team
 
 
-class Parser:
+class TranslateRecords:
     def __init__(self, record_handler):
         self.record_handler = record_handler
 
-    def parse(self, records: List[Record]) -> Dict[Franchise, Set[Team]]:
+    def translate(self, records: List[Record]) -> Dict[Franchise, Set[Team]]:
         return dict(
             map(
                 lambda entry: (entry[0], set([Team(name=entry[0].name,

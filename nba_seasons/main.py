@@ -3,23 +3,23 @@ from pathlib import Path
 
 from nba_seasons.parsing.com.basketball_reference.franchises import FranchiseAndTeamParser
 from nba_seasons.parsing.com.basketball_reference.seasons import parse as parse_seasons
-from nba_seasons.parsing.com.nba.franchises import Parser, RecordHandler
 from nba_seasons.translators.com.basketball_reference.franchise import translate_franchise, filter_franchises
 from nba_seasons.translators.com.basketball_reference.league import translate_league
+from nba_seasons.translators.com.basketball_reference.records import TranslateRecords, RecordHandler
 from nba_seasons.writers.com.basketball_reference.seasons import LeagueWriter
 
 
 def main():
-    with open("../src/data/com/basketball_reference/teams/2022-06-22.html", "r") as franchises_file:
+    with open("../nba_seasons/data/com/basketball_reference/teams/2022-06-22.html", "r") as franchises_file:
         records = list()
         parser = FranchiseAndTeamParser(lambda record: records.append(record))
         parser.feed(data=franchises_file.read())
         parser.close()
-        p = Parser(
+        p = TranslateRecords(
             record_handler=RecordHandler(start_year_deserializer=lambda start_year: int(start_year.split("-")[0])))
-        franchise_history = p.parse(records=records)
+        franchise_history = p.translate(records=records)
 
-        with open("../src/data/com/basketball_reference/seasons/2022-05-20.html", "r") as seasons_file:
+        with open("../nba_seasons/data/com/basketball_reference/seasons/2022-05-20.html", "r") as seasons_file:
             seasons = parse_seasons(seasons_file.read())
             current_directory = str(Path(__file__).resolve().parent)
             franchise_and_team_by_starting_season = filter_franchises(

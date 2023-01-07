@@ -3,31 +3,8 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import Dict, Optional, Tuple
 
-
-@dataclass(frozen=True)
-class NaturalNumber:
-    value: int
-
-    def __post_init__(self):
-        if 0 > self.value:
-            raise ValueError("Must have non-negative value")
-
-
-@dataclass(frozen=True)
-class PositiveInteger(NaturalNumber):
-    def __post_init__(self):
-        if 0 >= self.value:
-            raise ValueError("Must have non-positive value")
-
-
-@dataclass(frozen=True)
-class GregorianCalendarCommonEraYearCount(PositiveInteger):
-    pass
-
-
-@dataclass(frozen=True)
-class GregorianCalendarYearDuration(NaturalNumber):
-    pass
+from nba_seasons.models.iso_8601 import Year, YearDuration
+from nba_seasons.models.strings import NonEmptyString
 
 
 class SeasonIterator:
@@ -47,15 +24,6 @@ class SeasonIterator:
 
 
 @dataclass(frozen=True)
-class NonEmptyString:
-    value: str
-
-    def __post_init__(self):
-        if 0 >= len(self.value):
-            raise ValueError("String cannot be empty")
-
-
-@dataclass(frozen=True)
 class TeamName(NonEmptyString):
     pass
 
@@ -68,8 +36,8 @@ class FranchiseName(NonEmptyString):
 @dataclass(frozen=True)
 class Season:
     previous_season: Optional['Season']
-    offset: GregorianCalendarYearDuration
-    duration: Optional[GregorianCalendarYearDuration]
+    offset: YearDuration
+    duration: Optional[YearDuration]
     team_name_by_franchise_names: Dict[FranchiseName, TeamName]
 
     def __post_init__(self):
@@ -83,4 +51,4 @@ class Season:
 @dataclass(frozen=True, eq=True)
 class League:
     name: NonEmptyString
-    most_recent_season: Tuple[GregorianCalendarCommonEraYearCount, Season]
+    most_recent_season: Tuple[Year, Season]
