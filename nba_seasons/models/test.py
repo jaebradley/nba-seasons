@@ -27,8 +27,6 @@ class Season(Enum):
     def from_start_year(start_year):
         return SEASON_BY_START_YEAR.get(start_year)
 
-Season._st
-
 
 SEASON_BY_START_YEAR = {
     1: Season.FIRST,

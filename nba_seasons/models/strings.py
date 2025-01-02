@@ -6,5 +6,5 @@ class NonEmptyString:
     value: str
 
     def __post_init__(self):
-        if 0 >= len(self.value):
+        if 0 >= len(self.value.strip()):
             raise ValueError("String cannot be empty")

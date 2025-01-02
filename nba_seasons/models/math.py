@@ -14,4 +14,4 @@ class NaturalNumber:
 class PositiveInteger(NaturalNumber):
     def __post_init__(self):
         if 0 >= self.value:
-            raise ValueError("Must have non-positive value")
+            raise ValueError("Must have positive value")
